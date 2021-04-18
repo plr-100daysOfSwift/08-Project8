@@ -37,6 +37,14 @@ class ViewController: UIViewController {
 		cluesLabel.numberOfLines = 0
 		view.addSubview(cluesLabel)
 
+		answersLabel = UILabel()
+		answersLabel.translatesAutoresizingMaskIntoConstraints = false
+		answersLabel.font = UIFont.systemFont(ofSize: 24)
+		answersLabel.text = "ANSWERS"
+		answersLabel.numberOfLines = 0
+		answersLabel.textAlignment = .right
+		view.addSubview(answersLabel)
+
 
 		NSLayoutConstraint.activate([
 			scoreLabel.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
