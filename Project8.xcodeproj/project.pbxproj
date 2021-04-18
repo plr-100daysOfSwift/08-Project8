@@ -15,6 +15,7 @@
 		DA1EAC00262CE2C900DB9311 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA1EABFE262CE2C900DB9311 /* LaunchScreen.storyboard */; };
 		DA1EAC0B262CE2CA00DB9311 /* Project8Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1EAC0A262CE2CA00DB9311 /* Project8Tests.swift */; };
 		DA1EAC16262CE2CA00DB9311 /* Project8UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1EAC15262CE2CA00DB9311 /* Project8UITests.swift */; };
+		DA1EAC27262CE37B00DB9311 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DA1EAC26262CE37B00DB9311 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		DA1EAC11262CE2CA00DB9311 /* Project8UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Project8UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA1EAC15262CE2CA00DB9311 /* Project8UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project8UITests.swift; sourceTree = "<group>"; };
 		DA1EAC17262CE2CA00DB9311 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA1EAC26262CE37B00DB9311 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		DA1EABE7262CE2C700DB9311 = {
 			isa = PBXGroup;
 			children = (
+				DA1EAC26262CE37B00DB9311 /* README.md */,
 				DA1EABF2262CE2C700DB9311 /* Project8 */,
 				DA1EAC09262CE2C900DB9311 /* Project8Tests */,
 				DA1EAC14262CE2CA00DB9311 /* Project8UITests */,
@@ -233,6 +236,7 @@
 			files = (
 				DA1EAC00262CE2C900DB9311 /* LaunchScreen.storyboard in Resources */,
 				DA1EABFD262CE2C900DB9311 /* Assets.xcassets in Resources */,
+				DA1EAC27262CE37B00DB9311 /* README.md in Resources */,
 				DA1EABFB262CE2C700DB9311 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
