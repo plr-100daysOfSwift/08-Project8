@@ -63,23 +63,35 @@ class ViewController: UIViewController {
 		clear.setTitle("CLEAR", for: .normal)
 		view.addSubview(clear)
 
-		
+
 
 
 		NSLayoutConstraint.activate([
 			scoreLabel.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
 			scoreLabel.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
+
 			cluesLabel.topAnchor.constraint(equalTo: scoreLabel.bottomAnchor),
 			cluesLabel.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: 100),
 			cluesLabel.widthAnchor.constraint(equalTo: view.layoutMarginsGuide.widthAnchor, multiplier: 0.6, constant: -100),
+
 			answersLabel.topAnchor.constraint(equalTo: scoreLabel.bottomAnchor),
 			answersLabel.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor, constant: -100),
 			answersLabel.widthAnchor.constraint(equalTo: view.layoutMarginsGuide.widthAnchor, multiplier: 0.4, constant: -100),
 			answersLabel.heightAnchor.constraint(equalTo: cluesLabel.heightAnchor),
+
 			currentAnswer.centerXAnchor.constraint(equalTo: view.centerXAnchor),
 			currentAnswer.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5),
 			currentAnswer.topAnchor.constraint(equalTo: cluesLabel.bottomAnchor, constant: 20),
 
+			submit.topAnchor.constraint(equalTo: currentAnswer.bottomAnchor),
+			submit.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: -100),
+			submit.heightAnchor.constraint(equalToConstant: 44),
+
+			clear.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 100),
+			clear.centerYAnchor.constraint(equalTo: submit.centerYAnchor),
+			clear.heightAnchor.constraint(equalToConstant: 44),
+
+			
 
 
 		])
