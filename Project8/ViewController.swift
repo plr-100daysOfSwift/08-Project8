@@ -123,7 +123,7 @@ class ViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view.
+		loadLevel()
 	}
 
 	@objc func letterTapped(_ sender: UIButton) {
