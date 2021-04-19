@@ -14,6 +14,11 @@ class ViewController: UIViewController {
 	var currentAnswer: UITextField!
 	var scoreLabel: UILabel!
 	var letterButtons = [UIButton]()
+	var activatedButtons = [UIButton]()
+	var solutions = [String]()
+
+	var score = 0
+	var level = 1
 
 	override func loadView() {
 		view = UIView()
