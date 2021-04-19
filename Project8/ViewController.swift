@@ -123,5 +123,17 @@ class ViewController: UIViewController {
 		// Do any additional setup after loading the view.
 	}
 
+	@objc func letterTapped(_ sender: UIButton) {
+
+	}
+
+	@objc func submitTapped(_ sender: UIButton) {
+
+	}
+
+	@objc func clearTapped(_ sender: UIButton) {
+		
+	}
+
 }
 
