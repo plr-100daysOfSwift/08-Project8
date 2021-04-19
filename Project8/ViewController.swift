@@ -101,7 +101,21 @@ class ViewController: UIViewController {
 			buttonsView.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor, constant: -20)
 		])
 
-		cluesLabel.backgroundColor = .gray
+		let width = 150
+		let height = 80
+
+		for row in 0..<4 {
+			for col in 0..<5 {
+				let letterButton = UIButton(type: .system)
+				letterButton.titleLabel?.font = UIFont.systemFont(ofSize: 36)
+				letterButton.setTitle("WWW", for: .normal)
+				let frame = CGRect(x: col * width, y: row * height, width: width, height: height)
+				letterButton.frame = frame
+				buttonsView.addSubview(letterButton)
+				letterButtons.append(letterButton)
+			}
+		}
+
 	}
 
 }
