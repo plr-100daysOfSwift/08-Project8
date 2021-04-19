@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA000FC0262E369800C2D721 /* level1.txt in Resources */ = {isa = PBXBuildFile; fileRef = DA000FBF262E369800C2D721 /* level1.txt */; };
 		DA1EABF4262CE2C700DB9311 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1EABF3262CE2C700DB9311 /* AppDelegate.swift */; };
 		DA1EABF6262CE2C700DB9311 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1EABF5262CE2C700DB9311 /* SceneDelegate.swift */; };
 		DA1EABF8262CE2C700DB9311 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1EABF7262CE2C700DB9311 /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA000FBF262E369800C2D721 /* level1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level1.txt; sourceTree = "<group>"; };
 		DA1EABF0262CE2C700DB9311 /* Project8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project8.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA1EABF3262CE2C700DB9311 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA1EABF5262CE2C700DB9311 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				DA1EABF9262CE2C700DB9311 /* Main.storyboard */,
 				DA1EABFC262CE2C900DB9311 /* Assets.xcassets */,
 				DA1EABFE262CE2C900DB9311 /* LaunchScreen.storyboard */,
+				DA000FBF262E369800C2D721 /* level1.txt */,
 				DA1EAC01262CE2C900DB9311 /* Info.plist */,
 			);
 			path = Project8;
@@ -234,6 +237,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA000FC0262E369800C2D721 /* level1.txt in Resources */,
 				DA1EAC00262CE2C900DB9311 /* LaunchScreen.storyboard in Resources */,
 				DA1EABFD262CE2C900DB9311 /* Assets.xcassets in Resources */,
 				DA1EAC27262CE37B00DB9311 /* README.md in Resources */,
