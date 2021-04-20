@@ -141,13 +141,7 @@ class ViewController: UIViewController {
 	}
 
 	@objc func clearTapped(_ sender: UIButton) {
-		currentAnswer.text = ""
-
-		for button in activatedButtons {
-			button.isHidden = false
-		}
-
-		activatedButtons.removeAll()
+		resetSolution()
 	}
 
 	@objc func submitTapped(_ sender: UIButton) {
@@ -173,14 +167,20 @@ class ViewController: UIViewController {
 		} else {
 			let ac = UIAlertController(title: "That's not correct!", message: "\(answerText) is not a solution.", preferredStyle: .alert)
 			ac.addAction(UIAlertAction(title: "OK", style: .default) { action in
-				self.currentAnswer.text = ""
-				for button in self.activatedButtons {
-					button.isHidden = false
-				}
-				self.activatedButtons.removeAll()
-			})
+				self.resetSolution()
+		})
 			present(ac, animated: true)
 		}
+	}
+
+	fileprivate func resetSolution() {
+		currentAnswer.text = ""
+
+		for button in activatedButtons {
+			button.isHidden = false
+		}
+
+		activatedButtons.removeAll()
 	}
 
 	func loadLevel() {
