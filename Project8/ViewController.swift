@@ -149,7 +149,7 @@ class ViewController: UIViewController {
 				lines.shuffle()
 
 				for (index, line) in lines.enumerated() {
-					let parts = line.components(separatedBy: ":")
+					let parts = line.components(separatedBy: ": ")
 					let answer = parts[0]
 					let clue = parts[1]
 
