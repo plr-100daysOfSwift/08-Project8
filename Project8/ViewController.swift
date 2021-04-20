@@ -22,6 +22,7 @@ class ViewController: UIViewController {
 			scoreLabel.text = "Score: \(score)"
 		}
 	}
+
 	var level = 1
 
 	override func loadView() {
@@ -161,10 +162,14 @@ class ViewController: UIViewController {
 			score += 1
 
 			if score % 7 == 0 {
+				// TODO: Handle state where no more levels are available
 				let ac = UIAlertController(title: "Well done!", message: "Are you ready for the next level?", preferredStyle: .alert)
 				ac.addAction(UIAlertAction(title: "Let's go!", style: .default, handler: levelUp))
+				// TODO: Add cancel button
 				present(ac, animated: true)
 			}
+		} else {
+			// TODO: Handle invalid answer
 		}
 	}
 
