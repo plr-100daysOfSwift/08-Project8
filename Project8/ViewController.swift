@@ -132,6 +132,7 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		loadLevel()
+		// TODO: Display title and level
 	}
 
 	@objc func letterTapped(_ sender: UIButton) {
@@ -162,11 +163,26 @@ class ViewController: UIViewController {
 			solutionsFound += 1
 
 			if solutionsFound == 7 {
-				// TODO: Handle state where no more levels are available
-				let ac = UIAlertController(title: "Well done!", message: "Are you ready for the next level?", preferredStyle: .alert)
-				ac.addAction(UIAlertAction(title: "Let's go!", style: .default, handler: levelUp))
-				// TODO: Add cancel button
-				present(ac, animated: true)
+				if score == 7 {
+					// TODO: Handle state where no more levels are available
+					let ac = UIAlertController(title: "Well done!", message: "Are you ready for the next level?", preferredStyle: .alert)
+					ac.addAction(UIAlertAction(title: "Let's go!", style: .default, handler: levelUp))
+					ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+					present(ac, animated: true)
+				} else {
+					let ac = UIAlertController(title: "You scored \(score)!", message: "There's room for improvement though", preferredStyle: .alert)
+					ac.addAction(UIAlertAction(title: "Try Again", style: .default, handler: { action in
+						self.score = 0
+						self.solutionsFound = 0
+						self.activatedButtons.removeAll()
+						for button in self.letterButtons {
+							button.isHidden = false
+						}
+						self.loadLevel()
+					}))
+					ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+					present(ac, animated: true)
+				}
 			}
 		} else {
 			score -= 1
