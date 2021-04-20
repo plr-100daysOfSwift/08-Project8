@@ -133,11 +133,17 @@ class ViewController: UIViewController {
 		sender.isHidden = true
 	}
 
-	@objc func submitTapped(_ sender: UIButton) {
+	@objc func clearTapped(_ sender: UIButton) {
+		currentAnswer.text = ""
 
+		for btn in activatedButtons {
+			btn.isHidden = false
+		}
+
+		activatedButtons.removeAll()
 	}
 
-	@objc func clearTapped(_ sender: UIButton) {
+	@objc func submitTapped(_ sender: UIButton) {
 
 	}
 
