@@ -172,6 +172,7 @@ class ViewController: UIViewController {
 				} else {
 					let ac = UIAlertController(title: "You scored \(score)!", message: "There's room for improvement though", preferredStyle: .alert)
 					ac.addAction(UIAlertAction(title: "Try Again", style: .default, handler: { action in
+						// TODO: Duplicate code
 						self.score = 0
 						self.solutionsFound = 0
 						self.activatedButtons.removeAll()
