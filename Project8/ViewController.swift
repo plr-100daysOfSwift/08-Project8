@@ -136,8 +136,8 @@ class ViewController: UIViewController {
 	@objc func clearTapped(_ sender: UIButton) {
 		currentAnswer.text = ""
 
-		for btn in activatedButtons {
-			btn.isHidden = false
+		for button in activatedButtons {
+			button.isHidden = false
 		}
 
 		activatedButtons.removeAll()
@@ -210,8 +210,8 @@ class ViewController: UIViewController {
 
 		loadLevel()
 
-		for btn in letterButtons {
-			btn.isHidden = false
+		for button in letterButtons {
+			button.isHidden = false
 		}
 	}
 
