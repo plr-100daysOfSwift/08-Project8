@@ -141,11 +141,13 @@ class ViewController: UIViewController {
 	}
 
 	@objc func clearTapped(_ sender: UIButton) {
+		guard let answerText = currentAnswer.text, !answerText.isEmpty else { return }
+
 		resetSolution()
 	}
 
 	@objc func submitTapped(_ sender: UIButton) {
-		guard let answerText = currentAnswer.text else { return }
+		guard let answerText = currentAnswer.text, !answerText.isEmpty else { return }
 
 		if let solutionPosition = solutions.firstIndex(of: answerText) {
 			activatedButtons.removeAll()
