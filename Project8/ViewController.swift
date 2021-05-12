@@ -137,7 +137,11 @@ class ViewController: UIViewController {
 
 	@objc func letterTapped(_ sender: UIButton) {
 		guard let buttonTitle = sender.titleLabel?.text else { return }
-		currentAnswer.text = currentAnswer.text?.appending(buttonTitle)
+		let options: UIView.AnimationOptions = currentAnswer.text == "" ? [.transitionCrossDissolve] : [.transitionFlipFromRight]
+		UIView.transition(with: currentAnswer, duration: 0.5, options: options) {
+			self.currentAnswer.text = self.currentAnswer.text?.appending(buttonTitle)
+		}
+
 		activatedButtons.append(sender)
 
 		UIView.animate(withDuration: 0.5, delay: 0, options: []) {
