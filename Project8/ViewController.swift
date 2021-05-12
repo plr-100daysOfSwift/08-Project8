@@ -165,11 +165,17 @@ class ViewController: UIViewController {
 		if let solutionPosition = solutions.firstIndex(of: answerText) {
 			activatedButtons.removeAll()
 
-			var splitAnswers = answersLabel.text?.components(separatedBy: "\n")
+			var splitAnswers = self.answersLabel.text?.components(separatedBy: "\n")
 			splitAnswers?[solutionPosition] = answerText
-			answersLabel.text = splitAnswers?.joined(separator: "\n")
 
-			currentAnswer.text = ""
+			UIView.transition(with: currentAnswer, duration: 0.5, options: [.transitionFlipFromRight]) {
+				self.currentAnswer.text = ""
+			} completion: { finished in
+				UIView.transition(with: self.answersLabel, duration: 0.5, options: [.transitionCrossDissolve]) {
+					self.answersLabel.text = splitAnswers?.joined(separator: "\n")
+				}
+			}
+
 			score += 1
 			solutionsFound += 1
 
@@ -219,6 +225,9 @@ class ViewController: UIViewController {
 	}
 
 	func loadLevel() {
+
+		// TODO: Use attributed text in the ansewrs label. This will enable colouring for submitted answers
+
 		var clueString = ""
 		var solutionString = ""
 		var letterBits = [String]()
