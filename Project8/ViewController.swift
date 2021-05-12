@@ -226,7 +226,7 @@ class ViewController: UIViewController {
 
 	func loadLevel() {
 
-		// TODO: Use attributed text in the ansewrs label. This will enable colouring for submitted answers
+		// TODO: Use attributed text in the answers label. This will enable colouring for submitted answers
 
 		var clueString = ""
 		var solutionString = ""
