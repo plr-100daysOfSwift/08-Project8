@@ -207,7 +207,9 @@ class ViewController: UIViewController {
 	}
 
 	fileprivate func resetSolution() {
-		currentAnswer.text = ""
+		UIView.transition(with: currentAnswer, duration: 0.8, options: [.transitionFlipFromTop]) {
+			self.currentAnswer.text = ""
+		}
 
 		for button in activatedButtons {
 			button.isHidden = false
